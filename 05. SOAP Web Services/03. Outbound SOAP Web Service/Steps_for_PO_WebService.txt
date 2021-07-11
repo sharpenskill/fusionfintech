@@ -1,0 +1,18 @@
+Steps to find purchase order detail using SOAP Web Service
+
+-- Get WSDL from OER
+-- Add role to use the web service
+	--PO_SEARCH_PURCHASE_ORDER_WEB_SERVICE_PRIV
+	--PO_MANAGE_PURCHASE_ORDER_WEB_SERVICE_PRIV
+-- Get PO number and sold to bu id using sql query
+-- Call web service from SOAP UI
+
+
+
+https://ucf5-zeop-fa-ext.oracledemos.com
+
+https://ucf5-zeop-fa-ext.oracledemos.com/fscmService/PurchaseOrderService?WSDL
+
+
+po number - 162261
+sold to bu id - 300000046987012

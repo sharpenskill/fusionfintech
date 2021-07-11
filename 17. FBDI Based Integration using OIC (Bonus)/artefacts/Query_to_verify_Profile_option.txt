@@ -1,0 +1,7 @@
+SELECT   FPO.profile_option_name
+       , FPOV.level_name
+       , FPOV.profile_option_value
+  FROM   fnd_profile_options FPO
+       , fnd_profile_option_values FPOV
+ WHERE FPO.profile_option_name  = 'ORACLE.BC.REST.IGNORECATALOGERRORS'
+   AND FPO.profile_option_id = FPOV.profile_option_id 

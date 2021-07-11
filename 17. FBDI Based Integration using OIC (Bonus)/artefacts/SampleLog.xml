@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns01:onEvent xmlns:ns01="http://xmlns.oracle.com/cloud/adapter/erp/Getcallback_REQUEST/types">
+   <ns0:ErpImportBulkDataEvent xmlns:ns0="http://xmlns.oracle.com/apps/financials/commonModules/shared">
+      <ns0:SUMMARYSTATUS>SUCCEEDED</ns0:SUMMARYSTATUS>
+      <ns0:DOCUMENTID>2699190</ns0:DOCUMENTID>
+      <ns0:JOBS>
+         <ns0:CHILD>
+            <ns0:JOBPATH>/oracle/apps/ess/financials/commonModules/shared/common/interfaceLoader</ns0:JOBPATH>
+            <ns0:REQUESTID>2795586</ns0:REQUESTID>
+            <ns0:JOBNAME>Transfer File</ns0:JOBNAME>
+            <ns0:STATUS>SUCCEEDED</ns0:STATUS>
+         </ns0:CHILD>
+         <ns0:CHILD>
+            <ns0:JOBPATH>/oracle/apps/ess/financials/commonModules/shared/common/interfaceLoader</ns0:JOBPATH>
+            <ns0:REQUESTID>2795587</ns0:REQUESTID>
+            <ns0:JOBNAME>Load File to Interface</ns0:JOBNAME>
+            <ns0:STATUS>SUCCEEDED</ns0:STATUS>
+         </ns0:CHILD>
+         <ns0:JOBPATH>/oracle/apps/ess/financials/commonModules/shared/common/interfaceLoader</ns0:JOBPATH>
+         <ns0:REQUESTID>2795585</ns0:REQUESTID>
+         <ns0:JOBNAME>Load Interface File for Import</ns0:JOBNAME>
+         <ns0:DOCUMENTNAME>ImportJournal_2020-11-15T19:35:33.263Z.zip</ns0:DOCUMENTNAME>
+         <ns0:STATUS>SUCCEEDED</ns0:STATUS>
+      </ns0:JOBS>
+      <ns0:JOBS>
+         <ns0:CHILD>
+            <ns0:JOBPATH>/oracle/apps/ess/financials/generalLedger/programs/common</ns0:JOBPATH>
+            <ns0:REQUESTID>2795589</ns0:REQUESTID>
+            <ns0:JOBNAME>Import Journals: Child</ns0:JOBNAME>
+            <ns0:STATUS>SUCCEEDED</ns0:STATUS>
+         </ns0:CHILD>
+         <ns0:JOBPATH>/oracle/apps/ess/financials/generalLedger/programs/common</ns0:JOBPATH>
+         <ns0:REQUESTID>2795588</ns0:REQUESTID>
+         <ns0:JOBNAME>Import Journals</ns0:JOBNAME>
+         <ns0:STATUS>SUCCEEDED</ns0:STATUS>
+      </ns0:JOBS>
+      <ns0:JOBS>
+         <ns0:JOBPATH>/oracle/apps/ess/financials/commonModules/shared/common/interfaceLoader</ns0:JOBPATH>
+         <ns0:REQUESTID>2795591</ns0:REQUESTID>
+         <ns0:JOBNAME>Upload Interface Error and Job Output File to Universal Content Management</ns0:JOBNAME>
+         <ns0:STATUS>SUCCEEDED</ns0:STATUS>
+      </ns0:JOBS>
+      <ICSFile xmlns="http://xmlns.oracle.com/cloud/ics/file/v1/types">
+         <FileReference>file:/dbf21c3c-52dd-4951-9fa8-4305be85c82f@_@FWuOVOF4UhKKvvPWIeKnwpHZg3AqNgjOdJL7GmRMald1FkKH0AU2ieloHd8JJgbKJN82FVillGt3SlqW/XRoEw==</FileReference>
+      </ICSFile>
+   </ns0:ErpImportBulkDataEvent>
+</ns01:onEvent>

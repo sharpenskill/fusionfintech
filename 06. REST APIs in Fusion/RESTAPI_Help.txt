@@ -1,0 +1,22 @@
+Base URL: https://ucf3-zpnt-fa-ext.oracledemos.com
+Resource Path: /fscmRestApi/resources/11.13.18.05/standardReceipts
+
+
+Payload to create receipt:
+---------------------------
+{
+    "ReceiptNumber":"RCPT_4m_REST101",
+    "ReceiptMethod":"Check (Directly/No Remit)",
+    "BusinessUnit":"Sweden Business Unit",
+    "CustomerAccountNumber":"25100",
+    "CustomerSite":"Sydney",
+    "Amount":10,
+    "Currency":"SEK",
+    "RemittanceBankAccountNumber":"5001-1234567"
+}
+
+
+Query:
+----------
+SELECT *
+  FROM ar_cash_receipts_all;

@@ -1,0 +1,75 @@
+**********************************************
+**      SOAP Message for Create Supplier    **
+**********************************************
+WSDL: https://ucf5-zeop-fa-ext.oracledemos.com/fscmService/SupplierServiceV2?WSDL
+Operation Name: createSupplier
+-------------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sup="http://xmlns.oracle.com/apps/prc/poz/suppliers/supplierServiceV2/" xmlns:sup1="http://xmlns.oracle.com/apps/flex/prc/poz/suppliers/supplierServiceV2/supplierSites/" xmlns:sup2="http://xmlns.oracle.com/apps/flex/prc/poz/suppliers/supplierServiceV2/supplierAddress/" xmlns:sup3="http://xmlns.oracle.com/apps/flex/prc/poz/suppliers/supplierServiceV2/supplier/" xmlns:sup4="http://xmlns.oracle.com/apps/flex/prc/poz/suppliers/supplierServiceV2/supplierContact/" xmlns:typ="http://xmlns.oracle.com/apps/prc/poz/suppliers/supplierServiceV2/types/">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsu:Timestamp wsu:Id="TS-C205DF04B38BCF06B315428266688264">
+            <wsu:Created>2018-11-21T18:57:48.826Z</wsu:Created>
+            <wsu:Expires>2018-11-21T20:37:48.826Z</wsu:Expires>
+         </wsu:Timestamp>
+         <wsse:UsernameToken wsu:Id="UsernameToken-C205DF04B38BCF06B315428266541613">
+            <wsse:Username>fin_impl</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">DayH33Ya7</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">ULii7QeJkdHbMqR1LFpWew==</wsse:Nonce>
+            <wsu:Created>2018-11-21T18:57:34.161Z</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <typ:createSupplier>
+         <typ:supplierRow>
+            <sup:Supplier>Demo SV supplier Corporation</sup:Supplier>
+            <sup:BusinessRelationship>SPEND_AUTHORIZED</sup:BusinessRelationship>
+            <sup:TaxOrganizationType>CORPORATION</sup:TaxOrganizationType>
+            <sup:SupplierType>SUPPLIER</sup:SupplierType>
+            <sup:AlternateName>SV supplier</sup:AlternateName>
+            <sup:SupplierAddresses>
+               <sup:Operation>CREATE</sup:Operation>
+               <sup:AddressName>Main Office</sup:AddressName>
+               <sup:Country>US</sup:Country>
+               <sup:AddressLine1>100 Oracle Parkway</sup:AddressLine1>
+               <sup:City>Seattle</sup:City>
+               <sup:State>WA</sup:State>
+               <sup:County>KING</sup:County>
+               <sup:OrderingPurposeFlag>True</sup:OrderingPurposeFlag>
+            </sup:SupplierAddresses>
+            <sup:SupplierSites>
+               <sup:Operation>CREATE</sup:Operation>
+               <sup:SiteName>Main Office</sup:SiteName>
+               <sup:AddressName>Main Office</sup:AddressName>
+               <sup:ProcurementBU>US1 Business Unit</sup:ProcurementBU>
+               <sup:PurchasingPurposeFlag>True</sup:PurchasingPurposeFlag>
+               <sup:AlternateSiteName>Main Office -Purchasing</sup:AlternateSiteName>
+               <sup:CommunicationMethod>EMAIL</sup:CommunicationMethod>
+               <sup:EmailAddress>purchasing@supp01.com</sup:EmailAddress>
+               <sup:HoldAllNewPurchasingDocumentsFlag>False</sup:HoldAllNewPurchasingDocumentsFlag>
+               <sup:RequiredAcknowledgement>D</sup:RequiredAcknowledgement>
+               <sup:AcknowledgeWithinDays>5</sup:AcknowledgeWithinDays>
+               <sup:SupplierSiteAssignments>
+                  <sup:Operation>CREATE</sup:Operation>
+                  <sup:ClientBU>US1 Business Unit</sup:ClientBU>
+                  <sup:BillToBU>US1 Business Unit</sup:BillToBU>
+               </sup:SupplierSiteAssignments>
+            </sup:SupplierSites>
+            <sup:SupplierContacts>
+               <sup:Operation>CREATE</sup:Operation>
+               <sup:FirstName>Admin</sup:FirstName>
+               <sup:LastName>Contact</sup:LastName>
+               <sup:AdministrativeContactFlag>True</sup:AdministrativeContactFlag>
+               <sup:EmailAddress>Admin.Contact@supp01.com</sup:EmailAddress>
+               <sup:PhoneCountryCode>1</sup:PhoneCountryCode>
+               <sup:PhoneAreaCode>650</sup:PhoneAreaCode>
+               <sup:Phone>506-1110</sup:Phone>
+               <sup:SupplierContactAddresses>
+                  <sup:Operation>CREATE</sup:Operation>
+                  <sup:AddressName>Main Office</sup:AddressName>
+               </sup:SupplierContactAddresses>
+            </sup:SupplierContacts>
+         </typ:supplierRow>
+      </typ:createSupplier>
+   </soapenv:Body>
+</soapenv:Envelope>

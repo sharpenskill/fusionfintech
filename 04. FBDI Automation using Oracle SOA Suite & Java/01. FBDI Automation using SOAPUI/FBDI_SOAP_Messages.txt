@@ -1,0 +1,107 @@
+***********************************************
+**     SOAP Messages of FBDI Automation      **
+***********************************************
+uploadFileToUcm:
+-----------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/" xmlns:erp="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:uploadFileToUcm>
+         <typ:document>
+            <erp:Content>UEsDBBQAAAAIAMGsdE0s2kC8iwAAAMgBAAAPAAAAR2xJbnRlcmZhY2UuY3N2tY+9CsJAEIR7wTdZ
+zG7uzF3K6B3Y5FLEnzIEXVAIKp6+v0u0sIhioQOzxc4w8AW/AYW9dJabaW4IUiSbECUKoT5fuN3F
+PfMVykPccte1Rz7dIqxq91osgJDEYCzJ1WKZ7P1GUsbJI3a+rGbFcr5oQrUm29DQb3gjVRo+yAc3
+Hv2e0WT4HeMT8v+Md1BLAQI/ABQAAAAIAMGsdE0s2kC8iwAAAMgBAAAPACQAAAAAAAAAIAAAAAAA
+AABHbEludGVyZmFjZS5jc3YKACAAAAAAAAEAGADjPzM264DUAQBmwghYeNQBAGbCCFh41AFQSwUG
+AAAAAAEAAQBhAAAAuAAAAAAA</erp:Content>
+            <erp:FileName>GlInterface_1.zip</erp:FileName>
+            <!--Optional:-->
+            <erp:ContentType>zip</erp:ContentType>
+            <!--Optional:-->
+            <erp:DocumentTitle>GlInterface_1.zip</erp:DocumentTitle>
+            <!--Optional:-->
+            <erp:DocumentAuthor>FIN_IMPL</erp:DocumentAuthor>
+            <!--Optional:-->
+            <erp:DocumentSecurityGroup>FAFusionImportExport</erp:DocumentSecurityGroup>
+            <!--Optional:-->
+            <erp:DocumentAccount>fin$/generalLedger$/import$</erp:DocumentAccount>
+            <!--Optional:-->
+            <erp:DocumentName></erp:DocumentName>
+            <!--Optional:-->
+            <erp:DocumentId></erp:DocumentId>
+         </typ:document>
+      </typ:uploadFileToUcm>
+   </soapenv:Body>
+</soapenv:Envelope>
+====================================================================================================================================
+submitESSJobRequest(Load Interface File for Import):
+--------------------------------------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:submitESSJobRequest>
+         <typ:jobPackageName>/oracle/apps/ess/financials/commonModules/shared/common/interfaceLoader/</typ:jobPackageName>
+         <typ:jobDefinitionName>InterfaceLoaderController</typ:jobDefinitionName>
+         <!--Zero or more repetitions:-->
+         <typ:paramList>15</typ:paramList>
+         <typ:paramList>2184730</typ:paramList>
+         <typ:paramList>N</typ:paramList>
+         <typ:paramList>N</typ:paramList>
+         <typ:paramList>#NULL</typ:paramList>
+      </typ:submitESSJobRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+====================================================================================================================================
+getESSJobStatus:
+---------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:getESSJobStatus>
+         <typ:requestId>1475999</typ:requestId>
+      </typ:getESSJobStatus>
+   </soapenv:Body>
+</soapenv:Envelope>
+====================================================================================================================================
+submitESSJobRequest(Import Journals):
+-----------------------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:submitESSJobRequest>
+         <typ:jobPackageName>/oracle/apps/ess/financials/generalLedger/programs/common/</typ:jobPackageName>
+         <typ:jobDefinitionName>JournalImportLauncher</typ:jobDefinitionName>
+         <!--Zero or more repetitions:-->
+         <typ:paramList>300000046975980</typ:paramList>
+		 <typ:paramList>Spreadsheet</typ:paramList>
+         <typ:paramList>300000046975971</typ:paramList>
+		 <typ:paramList>ALL</typ:paramList>
+		 <typ:paramList>N</typ:paramList>
+         <typ:paramList>N</typ:paramList>
+         <typ:paramList>N</typ:paramList>
+      </typ:submitESSJobRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+====================================================================================================================================
+downloadESSJobExecutionDetails:
+--------------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:downloadESSJobExecutionDetails>
+         <typ:requestId>1476003</typ:requestId>
+         <typ:fileType>log</typ:fileType>
+      </typ:downloadESSJobExecutionDetails>
+   </soapenv:Body>
+</soapenv:Envelope>
+====================================================================================================================================
+downloadExportOutput:
+---------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:downloadExportOutput>
+         <typ:requestId>1476004</typ:requestId>
+      </typ:downloadExportOutput>
+   </soapenv:Body>
+</soapenv:Envelope>

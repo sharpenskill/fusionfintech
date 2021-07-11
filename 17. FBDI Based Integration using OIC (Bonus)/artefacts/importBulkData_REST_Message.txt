@@ -1,0 +1,17 @@
+REST URI:
+----------
+https://ucf3-zpri-fa-ext.oracledemos.com/fscmRestApi/resources/11.13.18.05/erpintegrations
+
+JSON Message:
+--------------
+{
+   "OperationName":"importBulkData",  "DocumentContent":"UEsDBBQAAAAIAO4Ca1LMe2YyhwAAAL4BAAAPAAAAR2xJbnRlcmZhY2UuY3N2tY/NCsJADITvgm8SbLJbu/ZY3QUvrYcqnosGFIqKq+9vaD0U+kMP7cDkkJkEvsydQWOlMIrNOjYEChUFqAMkyF9vLq7+xvyB9O4vXJbFg59fD6fcNosJEJIYzIZkhmJ5WblHUsZVHVuXHrbJcbeXU63aiy7VyYBcZpeL6fFMhOPw/nyz4v0AUEsBAj8AFAAAAAgA7gJrUsx7ZjKHAAAAvgEAAA8AJAAAAAAAAAAgAAAAAAAAAEdsSW50ZXJmYWNlLmNzdgoAIAAAAAAAAQAYAD9u5KfeFdcBP27kp94V1wGMYf4y3BXXAVBLBQYAAAAAAQABAGEAAAC0AAAAAAA=",
+   "ContentType":"zip",
+   "FileName":"ImportJournal_11032.zip",
+   "DocumentAccount":"fin$/generalLedger$/import$",
+   "JobName":"oracle/apps/ess/financials/generalLedger/programs/common,JournalImportLauncher",
+   "ParameterList":"US Primary Ledger,Spreadsheet,US Primary Ledger,11032,N,N,N",
+   "CallbackURL":"#NULL",
+   "NotificationCode":"10",
+   "JobOptions":"EnableEvent=Y,importOption=Y,purgeOption=Y,ExtractFileType!= NONE"
+}

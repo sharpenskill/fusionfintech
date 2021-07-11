@@ -1,0 +1,3 @@
+Ledger,"Trx Date",Currency,"Journal Entry Creation Date",Company,LoB,Account,"Cost Center",Product,Intercompany,"Entered Debit Amount","Entered Credit Amount","Batch Name","Group Id"
+"US Primary Ledger",2021/03/01,USD,2021/03/01,101,10,78110,410,000,000,100.00,,DEMOBATCH14034,14034
+"US Primary Ledger",2021/03/01,USD,2021/03/01,101,10,77600,410,000,000,,100.00,DEMOBATCH14034,14034

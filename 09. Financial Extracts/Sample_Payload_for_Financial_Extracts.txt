@@ -1,0 +1,74 @@
+******************************************************
+** SOAP Messages for Financial Extracts Automation  **
+******************************************************
+-----------------------------------------------------------
+ERP Integration Service to submit Financial Extract Program:
+------------------------------------------------------------
+WSDL: https://<host:port>/publicFinancialCommonErpIntegration/ErpIntegrationService?WSDL
+Operation Name: exportBulkData
+Message:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:exportBulkData>
+         <typ:jobName>oracle/apps/ess/financials/commonModules/shared/common/outbound,FinOutboundProcess</typ:jobName>
+         <!--Optional:--> <typ:parameterList>92,/oracle/apps/ess/financials/commonModules/shared/common/outbound;PayablesTransactionsExtract,BIPREPORT,FULL_EXTRACT,DemoInv1,300000046987012,#NULL,#NULL,#NULL,#NULL,#NULL,11-18,N,N,300000046975971
+,#NULL,#NULL,#NULL,FULL_EXTRACT,#NULL,#NULL,#NULL,PayablesTransactionsExtract,#NULL</typ:parameterList>
+         <!--Optional:-->
+         <typ:jobOptions></typ:jobOptions>
+         <typ:callbackURL>#NULL</typ:callbackURL>
+         <typ:notificationCode>#NULL</typ:notificationCode>
+      </typ:exportBulkData>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+-----------------------------------------------------------------  
+UCM Web Service to Export Financial Extract Output File from UCM:
+-----------------------------------------------------------------
+WSDL: https://<host:port>/idcws/GenericSoapPort?WSDL
+Operation Name: GenericRequest
+Message:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ucm="http://www.oracle.com/UCM">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsu:Timestamp wsu:Id="TS-5D59BCC08EF5EA579315426642899535">
+            <wsu:Created>2018-11-19T21:51:29.953Z</wsu:Created>
+            <wsu:Expires>2018-11-19T23:31:29.953Z</wsu:Expires>
+         </wsu:Timestamp>
+         <wsse:UsernameToken wsu:Id="UsernameToken-5D59BCC08EF5EA579315426611916803">
+            <wsse:Username>FIN_IMPL</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">DayH33Ya7</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">ZoKaMUnvJmGpOHHjlzIN2g==</wsse:Nonce>
+            <wsu:Created>2018-11-19T20:59:51.679Z</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ucm:GenericRequest webKey="cs">
+         <ucm:Service IdcService="GET_FILE">
+            <ucm:Document>
+               <ucm:Field name="dDocName">DEMOINV11474772_BIPREPORT0</ucm:Field>
+               <ucm:Field name="RevisionSelectionMethod">Latest</ucm:Field>
+            </ucm:Document>
+         </ucm:Service>
+      </ucm:GenericRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------------------------------------------------------
+ERP Integration Service to Export Data File from Job's Output:
+---------------------------------------------------------------
+WSDL: https://<host:port>/publicFinancialCommonErpIntegration/ErpIntegrationService?WSDL
+Operation Name: downloadExportOutput
+Message:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:downloadExportOutput>
+         <typ:requestId>1474772</typ:requestId>
+      </typ:downloadExportOutput>
+   </soapenv:Body>
+</soapenv:Envelope>

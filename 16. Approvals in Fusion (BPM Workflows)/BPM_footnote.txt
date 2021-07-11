@@ -1,0 +1,2 @@
+HierarchyBuilder.getManager("supervisory",Task.Workflow Submitter,-1,"","")
+HierarchyBuilder.getPrincipal("FINUSER30",-1,"","")

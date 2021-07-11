@@ -1,0 +1,43 @@
+General Logging/Exception Handling Vars/Attributes:
+---------------------------------------------------
+InstanceId=ora:getFlowId()
+IntegrationName=ImportJournal
+
+FTP Related Vars/Attributes:
+----------------------------
+SourceFileInputPath=/home/ubuntu/journal/input
+SourceFileArchivePath=/home/ubuntu/journal/archive
+FileNamePattern=Journal*.csv
+
+Journal Data File and Properties File Related Vars/Attributes:
+---------------------------------------------------------------
+JournalFileName=GlInterface.csv
+PropertiesFileName=ImportJournal.properties
+JournalAndPropertiesFilePath=/tmp/journal/input
+
+FBDIZipFileName=concat("ImportJournal_",fn:current-dateTime(),".zip")
+FBDIZipFileDir=/tmp/journal/zip
+
+JournalImportStatusCode=NEW
+JournalSource=Spreadsheet
+JournalCategory=Miscellaneous
+ActualFlag=A
+
+JournalJobPackageName=/oracle/apps/ess/financials/generalLedger/programs/common/
+JournalESSJobName=JournalImportLauncher
+GroupId=ALL
+AccountErrors=N
+Summary=N
+DFF=N
+
+Report Related Vars/Attributes:
+-------------------------------
+ReportOutputFileName=GL_DAS_Ledger.xml
+ReportOutputPath=/tmp/report/output
+
+ReportParameterDAS=p_das_name
+ReportParameterLedger=p_ledger_name
+DataAccessSet=US Primary Ledger
+ReportAbsolutePath=/Custom/Financials/GL_DAS_Ledger_Report.xdo
+SizeChunkDataDownload=-1
+AttributeFormat=xml

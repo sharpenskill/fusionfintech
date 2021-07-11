@@ -1,0 +1,13 @@
+Supplier Web Service
+-- get WSDL from OER
+-- roles and privileges to use this web service
+-- prepare request payload for supplier creation
+-- verify that supplier from oracle cloud application
+
+
+https://ucf5-zeop-fa-ext.oracledemos.com
+
+https://ucf5-zeop-fa-ext.oracledemos.com/fscmService/SupplierServiceV2?WSDL
+
+role - Supplier Adminsitration and Supplier Manager
+Privilege - POZ_MANAGE_SUPPLIER_BY_WEB_SERVICE_PRIV

@@ -1,0 +1,13 @@
+Agenda of Journal Single Web Service
+--Get the WSDL from OER
+--WSDL URL - https://ucf5-zeop-fa-ext.oracledemos.com/fscmService/JournalImportService?WSDL
+--Add Privileges to the user
+--Run WSDL from soap ui
+--Run Import Journals manually from Fusion Instance
+
+https://ucf5-zeop-fa-ext.oracledemos.com/fscmUI/faces/FuseWelcome
+
+https://ucf5-zeop-fa-ext.oracledemos.com/fscmService/JournalImportService?WSDL
+
+Privileges - GL_RUN_IMPORT_JOURNALS_VIA_PROGRAM_CALL_PRIV
+GL_RUN_IMPORT_JOURNALS_PROGRAM_PRIV

@@ -1,0 +1,20 @@
+************************************
+**   SOAP Message for Search PO   **
+************************************
+WSDL: https://ucf5-zeop-fa-ext.oracledemos.com/fscmService/PurchaseOrderService?WSDL
+Operation Name: findPurchaseOrderByOrderNumber
+-----------------------------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderService/types/" xmlns:typ1="http://xmlns.oracle.com/adf/svc/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:findPurchaseOrderByOrderNumber>
+         <typ:findCriteria>
+         </typ:findCriteria>
+         <typ:OrderNumber>162261</typ:OrderNumber>
+         <typ:SoldToBUId>300000046987012</typ:SoldToBUId>
+         <typ:findControl>
+            <typ1:retrieveAllTranslations>false</typ1:retrieveAllTranslations>
+         </typ:findControl>
+      </typ:findPurchaseOrderByOrderNumber>
+   </soapenv:Body>
+</soapenv:Envelope>

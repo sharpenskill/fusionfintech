@@ -1,0 +1,1 @@
+https://ucf5-zeop-fa-ext.oracledemos.com/publicFinancialCommonErpIntegration/ErpIntegrationService?WSDL

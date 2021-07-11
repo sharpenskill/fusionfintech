@@ -1,0 +1,22 @@
+ADFdi Notes:
+============
+
+To remove ADF DI from Excel:
+-------------------------------
+NOTE:1924827.1 - How to remove Oracle ADF Desktop Integration Add-in for Excel from Desktop System? 
+
+Roles required to access ADFdi:
+--------------------------------
+NOTE:1908103.1 - What is the role required to access ADFdi installer download link in Navigator menu ? 
+
+Download and Install ADFdi:
+----------------------------
+NOTE:1679257.1 - How To download and Install ADF Di Excel Add-in for Fusion Applications ?
+
+Verify ADFdi plugin Installation:
+---------------------------------
+NOTE:1362101.1 - How to check if ADF Di client is corrupted or not installed properly
+
+Troubleshooting Oracle ADF Desktop Integration:
+-----------------------------------------------
+NOTE:2012600.2 - Information Center: Troubleshooting Oracle ADF Desktop Integration

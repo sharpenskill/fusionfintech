@@ -1,0 +1,45 @@
+WSDL:
+-----
+https://ucf3-zpri-fa-ext.oracledemos.com:443/fscmService/ErpIntegrationService?WSDL
+
+SOAP Message:
+-------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/types/" xmlns:erp="http://xmlns.oracle.com/apps/financials/commonModules/shared/model/erpIntegrationService/">
+<soapenv:Header/>
+<soapenv:Body>
+<typ:importBulkData>
+<!--Optional:-->
+<typ:document>
+<!--Optional:-->
+<erp:Content>UEsDBBQAAAAIALECa1LC+cxMhgAAAL4BAAAPAAAAR2xJbnRlcmZhY2UuY3N2tY9PC4JAEMXvQd9kyBnX3Dxau9BFO1h0lhookIq2vr+DehD8gwd98OYw783AL7VXUFgpCCO9jTSBjz55qDwkyD5fzu/uwfyD5OluXBT5i99/B5fMtIsxEJIY9I5kBmJ5WXlAUsZNHRubnPbx+XCUU0XdRZ/qZEQ2NevV/Hg6xGl4Dd+ieCVQSwECPwAUAAAACACxAmtSwvnMTIYAAAC+AQAADwAkAAAAAAAAACAAAAAAAAAAR2xJbnRlcmZhY2UuY3N2CgAgAAAAAAABABgAWVTwY94V1wFZVPBj3hXXAYxh/jLcFdcBUEsFBgAAAAABAAEAYQAAALMAAAAAAA==</erp:Content>
+<erp:FileName>ImportJournal_11031.zip</erp:FileName>
+<!--Optional:-->
+<erp:ContentType>zip</erp:ContentType>
+<!--Optional:-->
+<erp:DocumentTitle>ImportJournal_11031</erp:DocumentTitle>
+<!--Optional:-->
+<erp:DocumentAuthor>fas02.student</erp:DocumentAuthor>
+<!--Optional:-->
+<erp:DocumentSecurityGroup>FAFusionImportExport</erp:DocumentSecurityGroup>
+<!--Optional:-->
+<erp:DocumentAccount>fin$/generalLedger$/import$</erp:DocumentAccount>
+<!--Optional:-->
+</typ:document>
+<!--Zero or more repetitions:-->
+<typ:jobDetails>
+<!--Optional:-->
+<erp:JobName>oracle/apps/ess/financials/generalLedger/programs/common,JournalImportLauncher</erp:JobName>
+<!--Optional:-->
+<erp:ParameterList>US Primary Ledger,Spreadsheet,US Primary Ledger,11031,N,N,N</erp:ParameterList>
+<!--Optional:-->
+<erp:JobRequestId></erp:JobRequestId>
+</typ:jobDetails>
+<!--Optional:-->
+<typ:notificationCode>30</typ:notificationCode>
+<!--Optional:-->
+<typ:callbackURL></typ:callbackURL>
+<!--Optional:-->
+<typ:jobOptions>EnableEvent=Y,importOption=Y,purgeOption=Y,ExtractFileType!= NONE</typ:jobOptions>
+</typ:importBulkData>
+</soapenv:Body>
+</soapenv:Envelope>
